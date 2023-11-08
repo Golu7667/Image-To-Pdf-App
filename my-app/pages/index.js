@@ -39,10 +39,11 @@ export default function Home (){
 
     return (
     <div className='w-100vw min-h-screen flex justify-center items-center '>
-    <h1>Image to PDF Converter</h1>
+    <div className='w-96 h-96 flex justify-center items-center shadow-orange-400'>
+    <h1 >Image to PDF Converter</h1>
     <input type="file" accept=".jpg, .jpeg, .png" multiple onChange={handleFileChange} />
     <button onClick={generatePDF}>Convert to PDF</button>
-    
+    </div>
     </div>
     )
 }
