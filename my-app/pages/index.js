@@ -2,7 +2,7 @@ import { useState } from 'react';
 import jsPDF from 'jspdf';
 
 
-export default Home=()=>{
+export default function Home (){
     const [images, setImages] = useState([]);
     const [pdf, setPdf] = useState(null);
     const [check,setCheck]=useState(false)

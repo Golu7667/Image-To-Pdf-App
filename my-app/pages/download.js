@@ -1,5 +1,5 @@
 
-export default Download=()=>{
+export default function   Download(){
     reurn (
         <div>
         <h2>Your PDF is ready!</h2>
