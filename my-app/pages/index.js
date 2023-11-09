@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import jsPDF from 'jspdf';
-
+import Link from 'next/link'
 
 export default function Home (){
     const [images, setImages] = useState([]);
@@ -43,6 +43,13 @@ export default function Home (){
     <h1 >Image to PDF Converter</h1>
     <input type="file" accept=".jpg, .jpeg, .png" multiple onChange={handleFileChange} />
     <button onClick={generatePDF}>Convert to PDF</button>
+    <button onClick={downloadPDF}>Download</button>
+    <iframe
+          src={pdf.output('bloburl')}
+          width="100%"
+          height="600px"
+          title="Converted PDF"
+        ></iframe>
     </div>
     </div>
     )
