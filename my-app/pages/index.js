@@ -39,17 +39,17 @@ export default function Home (){
 
     return (
     <div className='w-100vw min-h-screen flex justify-center items-center '>
-    <div className='w-96 h-96 flex justify-center items-center shadow-orange-400'>
-    <h1 >Image to PDF Converter</h1>
-    <input type="file" accept=".jpg, .jpeg, .png" multiple onChange={handleFileChange} />
-    <button onClick={generatePDF}>Convert to PDF</button>
-    <button onClick={downloadPDF}>Download</button>
-    <iframe
-          src={pdf.output('bloburl')}
-          width="100%"
-          height="600px"
-          title="Converted PDF"
-        ></iframe>
+    <div className='w-5/6 h-96  '>
+    <h1 className='w-100% flex justify-center font-extrabold text-4xl font-serif '>Image to PDF Converter</h1>
+    <div className='w-full flex justify-center mt-32'>
+    <input type="file" accept=".jpg, .jpeg, .png" multiple onChange={handleFileChange}/>
+    </div>
+    <div className='w-full flex justify-center font-extrabold '>
+    <button onClick={downloadPDF} className='w-96 h-16 bg-sky-500 rounded-lg mt-32 text-white font-serif'>Download</button>
+    </div>
+    <div className='w-full flex justify-center font-extrabold mt-6'>
+    <button onClick={downloadPDF} className='w-96 h-16 bg-sky-500 rounded-lg text-white font-serif'>Download</button>
+    </div>
     </div>
     </div>
     )
